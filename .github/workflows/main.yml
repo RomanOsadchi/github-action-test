@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: get git action
-        run: echo ${{toJSON(github.event)}}
       - name: install deps
         run: ls || npm ci
       - name: build
