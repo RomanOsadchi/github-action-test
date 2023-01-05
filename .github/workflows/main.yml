@@ -8,6 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: get git action
+        run: echo ${{github}}
       - name: install deps
         run: ls || npm ci
       - name: build
