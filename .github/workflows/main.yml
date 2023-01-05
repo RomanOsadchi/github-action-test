@@ -1,0 +1,14 @@
+name: build project
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+    branches: 
+      - main
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install deps
+        run: ls || npm ci
+      - name: build
+        run: npm build
