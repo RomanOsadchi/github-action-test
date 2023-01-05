@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get git action
-        run: echo ${{github}}
+        run: echo ${{toJSON(github.event)}}
       - name: install deps
         run: ls || npm ci
       - name: build
