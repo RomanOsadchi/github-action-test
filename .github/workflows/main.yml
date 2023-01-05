@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install deps
-        run: ls || npm ci
+        run: npm ci
       - name: build
         run: npm run build
