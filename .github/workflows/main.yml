@@ -13,4 +13,4 @@ jobs:
       - name: install deps
         run: ls || npm ci
       - name: build
-        run: npm build
+        run: npm run build
